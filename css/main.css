@@ -1,0 +1,76 @@
+body {
+    background: #e5ebec;
+}
+
+header {
+    margin-bottom: 100px;
+}
+
+.order-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter {
+    display: flex;
+}
+
+.order-counter-input {
+    margin-right: 25px;
+}
+
+.uk-button.order-counter-plus, .uk-button.order-counter-minus {
+    padding: 0 15px;
+}
+
+.uk-card-media-top {
+    text-align: center;
+}
+
+/*для checkout*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: sans-serif;
+}
+.form {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: url("/img/checkout_bg.jpg");
+    background-size: cover;
+    background-position: top center;
+}
+.userForm {
+    padding: 10px;
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    min-width: 300px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+#formHeading {
+    margin-top: 20px;
+    text-align: center;
+}
+.formBtn {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+.formBtn:hover {
+    background: lightgreen;
+}
+.userComment {
+    margin-bottom: 20px;
+}
+.uk-margin:last-child {
+    margin-bottom: 5px;
+}
