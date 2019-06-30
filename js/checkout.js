@@ -20,7 +20,7 @@ window.onload = function () {
                         .append(new InputForm('uk-input userAdress', 'text', 'Например: ул. Машерова д.22 кв. 13')) //так как меняется
                         .append($('<div/>')
                             .addClass('uk-margin')
-                            .append(new Label('Комментария', 'userComment')) //так как меняется
+                            .append(new Label('Комментарий', 'userComment')) //так как меняется
                             .append(this.textarea)
                             .append(this.formButton)
                         ))))

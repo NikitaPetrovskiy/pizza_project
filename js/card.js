@@ -3,7 +3,7 @@ let Card = function (title, image, description, price) {
     this.image = new Image('item-image', image);
     this.description = new Paragraph(description, 'item-description');
     this.price = new Paragraph(price, 'item-price uk-text-warning');
-    this.cardButton = new Button('Заказать');
+    this.cardButton = new Button('Заказать', 'btnOrder');
     this.cardCounter = new CardCounter();
     return $('<li/>')
         .addClass('uk-card uk-card-default catalog-item')
@@ -25,7 +25,7 @@ let Card = function (title, image, description, price) {
 let CardCounter = function (counterStyles, inputStyles) {
     this.counterStyles = counterStyles || 'counter-container';
     this.inputStyles = inputStyles;
-    this.counterInput = new Input(1, 1, 'uk-input uk-form-width-xsmall order-counter-input');
+    this.counterInput = new Input(1, 1, 'orderInput uk-input uk-form-width-xsmall order-counter-input');
     this.incr = new Button('+', 'uk-button uk-button-default order-counter-plus');
     this.decr = new Button('-', 'uk-button uk-button-default order-counter-minus');
     this.initEvents();

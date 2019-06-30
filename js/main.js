@@ -23,6 +23,54 @@ let products = [
         description: 'Сладкий перец, Сыр моцарелла, Лук, Томаты, Оливки, Шампиньоны, Томатный соус Domino\'s',
         price: '9.9р'
     },
+    {
+        title: 'Чикен Карри',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/12/23/%D1%81hicken_curry_small.png',
+        description: 'Соус карри, Курица, Ветчина, Ананас, Сыр моцарелла',
+        price: '12.9р'
+    },
+    {
+        title: 'Карбонара',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/09/12/carbonara.png',
+        description: 'Сыр моцарелла, Шампиньоны, Крем фреш, Лук, Ветчина, Бекон',
+        price: '12.9р'
+    },
+    {
+        title: 'Пепперони Блюз',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/09/12/pepperoni_bluz.png',
+        description: 'Сыр моцарелла, Соус Чесночный, Пепперони, Голубой сыр',
+        price: '12.9р'
+    },
+    {
+        title: 'Спайси',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/09/12/spice.png',
+        description: 'Пепперони, Халапеньо, Сыр моцарелла, Томатный соус Domino\'s, Томаты, Бекон',
+        price: '12.9р'
+    },
+    {
+        title: 'Кантри',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/09/12/kantri.png',
+        description: 'Лук, Ветчина, Соус Чесночный, Огурцы, Сыр моцарелла, Шампиньоны, Бекон',
+        price: '14.9р'
+    },
+    {
+        title: '5 Сыров',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/09/12/5_syrov.png',
+        description: 'Пармезан, Крем фреш, Чеддер, Голубой сыр, Фета, Сыр моцарелла',
+        price: '14.9р'
+    },
+    {
+        title: 'Тоскана',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/09/12/toskana.png',
+        description: 'Томаты, Фета, Курица, Сыр моцарелла, Соус Чесночный, Шпинат',
+        price: '14.9р'
+    },
+    {
+        title: 'Белорусская',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/09/12/belorusskaya.png',
+        description: 'Бекон x 2, Соус Чесночный, Сыр моцарелла, Телятина x 2, Лук, Огурцы, Картофельные дольки',
+        price: '14.9р'
+    }
 ];
 
 let Image = function (classNames, src, alt) {
@@ -141,17 +189,17 @@ window.onload = function () {
             wrapper: 'li',
         },
         {
+            text: 'Оформить заказ',
+            address: '/checkout',
+            className: 'uk-text-success',
+            wrapper: 'li',
+        },
+        {
             text: 'Корзина',
             address: '#modal-example',
             className: 'uk-text-danger',
             wrapper: 'li',
             specAttr: 'uk-toggle'
         },
-        {
-            text: 'Оформить заказ',
-            address: '/checkout',
-            className: 'uk-text-success',
-            wrapper: 'li',
-        }
     ]));
 };
