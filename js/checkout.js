@@ -1,5 +1,4 @@
-window.onload = function () {
-    let Form = function (title, label, input, textarea) {
+ let Form = function (title, label, input, textarea) {
         this.title = new Legend('Ваш заказ', 'uk-legend', 'formHeading');
         this.label = label; // эти параметры меняются
         this.input = input; // эти параметры меняются
@@ -25,6 +24,3 @@ window.onload = function () {
                             .append(this.formButton)
                         ))))
     };
-
-    $('.form').append(new Form());
-}

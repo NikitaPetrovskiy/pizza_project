@@ -227,6 +227,7 @@ window.onload = function () {
     otherProducts.forEach(function (otherProducts) {
         $('#other-list').append(new Card(otherProducts.title, otherProducts.image, otherProducts.description, otherProducts.price));
     });
+    $('.form').append(new Form());
 
     $('#nav-container').append(new Nav([
         {
