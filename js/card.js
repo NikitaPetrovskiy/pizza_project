@@ -3,7 +3,7 @@ let Card = function (title, image, description, price) {
     this.image = new Image('item-image', image);
     this.description = new Paragraph(description, 'item-description');
     this.price = new Paragraph(price, 'item-price uk-text-warning');
-    this.cardButton = new Button('Заказать', 'btnOrder');
+    this.cardButton = new Button('В корзину', 'btnOrder');
     this.cardCounter = new CardCounter();
     return $('<li/>')
         .addClass('uk-card uk-card-default catalog-item')

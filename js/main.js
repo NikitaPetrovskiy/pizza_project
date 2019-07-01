@@ -72,6 +72,56 @@ let products = [
         price: '14.9р'
     }
 ];
+let otherProducts = [
+    {
+        title: 'Кока-кола 0,5 л',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/11/19/%D0%BA%D0%BE%D0%BB%D0%B0_05%D0%BB_640%D1%85441_%D0%BF%D1%80%D0%BE%D0%B7%D1%80_19.11.18.png',
+        description: '',
+        price: '2.1р'
+    },
+    {
+        title: 'Кока-кола Зеро 0,5 л',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/11/19/%D0%BA%D0%BE%D0%BB%D0%B0_%D0%B7%D0%B5%D1%80%D0%BE_05%D0%BB_640%D1%85441_%D0%BF%D1%80%D0%BE%D0%B7%D1%80_19.11.18.png',
+        description: '',
+        price: '2.1р'
+    },
+    {
+        title: 'Фанта Апельсин 0,5 л',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/03/31/%D0%A4%D0%B0%D0%BD%D1%82%D0%B0_%D0%B0%D0%BF%D0%B5%D0%BB%D1%8C%D1%81%D0%B8%D0%BD_05%D0%BB.png',
+        description: '',
+        price: '2.1р'
+    },
+    {
+        title: 'Спрайт 0,5 л',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/03/31/%D1%81%D0%BF%D1%80%D0%B0%D0%B9%D1%82_05_640%D1%85441_%D0%BF%D1%80%D0%BE%D0%B7%D1%80.png',
+        description: '',
+        price: '2.1р'
+    },
+    {
+        title: 'Бонаква Среднегазированая 0,5 л',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/11/19/%D0%B1%D0%BE%D0%BD%D0%B0%D0%BA%D0%B2%D0%B0_%D1%81%D1%80_%D0%B3%D0%B0%D0%B7_05%D0%BB_640%D1%85441_%D0%BF%D1%80%D0%BE%D0%B7%D1%80_19.11.18.png',
+        description: '',
+        price: '1.4р'
+    },
+    {
+        title: 'Бонаква Негазированная 0,5 л',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2018/11/19/%D0%B1%D0%BE%D0%BD%D0%B0%D0%BA%D0%B2%D0%B0_%D0%BD-%D0%B3%D0%B0%D0%B7_05%D0%BB_640%D1%85441_%D0%BF%D1%80%D0%BE%D0%B7%D1%80_19.11.18.png',
+        description: '',
+        price: '1.4р'
+    },
+    {
+        title: 'FUZE TEA Черный чай Лесные ягоды 0,5л',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2019/01/29/FUZE_TEA_BT_500_Dry_Berries_Closed.png',
+        description: '',
+        price: '2.2р'
+    },
+    {
+        title: 'FUZE TEA Клубника и Малина 0,5л',
+        image: 'https://images.dominos.by/media/dominos/osg/api/2019/01/29/FUZE_TEA_GT_500_Dry_StrawbRasp_Closed.png',
+        description: '',
+        price: '2.2р'
+    },
+];
 
 let Image = function (classNames, src, alt) {
     this.classNames = classNames;
@@ -173,6 +223,9 @@ let Textarea = function (classNames, rows, placeholder,) {
 window.onload = function () {
     products.forEach(function (product) {
         $('#product-list').append(new Card(product.title, product.image, product.description, product.price));
+    });
+    otherProducts.forEach(function (otherProducts) {
+        $('#other-list').append(new Card(otherProducts.title, otherProducts.image, otherProducts.description, otherProducts.price));
     });
 
     $('#nav-container').append(new Nav([
