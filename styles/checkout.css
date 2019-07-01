@@ -1,0 +1,48 @@
+.form {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: black;
+  font-family: sans-serif;
+  background: url("/img/checkout_bg.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+
+.userForm {
+  padding: 10px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  min-width: 300px;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#formHeading {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.formBtn {
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.formBtn:hover {
+  background: lightgreen;
+}
+
+.userComment {
+  margin-bottom: 20px;
+}
+
+.uk-margin:last-child {
+  margin-bottom: 5px;
+}
+
+/*# sourceMappingURL=checkout.css.map */
