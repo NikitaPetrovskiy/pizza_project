@@ -255,5 +255,11 @@ window.onload = function () {
             wrapper: 'li',
             specAttr: 'uk-toggle'
         },
+        {
+            text: 'Контакты',
+            address: '/contacts',
+            className: '',
+            wrapper: 'li',
+        },
     ]));
 };
