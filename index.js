@@ -5,7 +5,7 @@ const app = express();
 
 //Настройка выдачи статических файлов
 app.use('/lib', express.static('node_modules/'));
-app.use('/css', express.static('css/'));
+app.use('/styles', express.static('styles/'));
 app.use('/img', express.static('images/'));
 app.use('/js', express.static('js/'));
 
