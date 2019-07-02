@@ -237,8 +237,14 @@ window.onload = function () {
             wrapper: 'li',
         },
         {
-            text: 'О нас',
+            text: 'О проекте',
             address: '/about',
+            className: '',
+            wrapper: 'li',
+        },
+        {
+            text: 'Контакты',
+            address: '/contacts',
             className: '',
             wrapper: 'li',
         },
@@ -255,11 +261,104 @@ window.onload = function () {
             wrapper: 'li',
             specAttr: 'uk-toggle'
         },
+    ]));
+    $('.contacts_menu').append(new Nav([
+        {
+            text: 'Главная',
+            address: '/',
+            className: '',
+            wrapper: 'li',
+        },
+        {
+            text: 'О проекте',
+            address: '/about',
+            className: '',
+            wrapper: 'li',
+        },
         {
             text: 'Контакты',
             address: '/contacts',
             className: '',
             wrapper: 'li',
+        },
+        {
+            text: 'Оформить заказ',
+            address: '/checkout',
+            className: 'uk-text-success',
+            wrapper: 'li',
+        },
+        {
+            text: 'Корзина',
+            address: '#modal-example',
+            className: 'uk-text-danger',
+            wrapper: 'li',
+            specAttr: 'uk-toggle'
+        },
+    ]));
+    $('.checkout_menu').append(new Nav([
+        {
+            text: 'Главная',
+            address: '/',
+            className: '',
+            wrapper: 'li',
+        },
+        {
+            text: 'О проекте',
+            address: '/about',
+            className: '',
+            wrapper: 'li',
+        },
+        {
+            text: 'Контакты',
+            address: '/contacts',
+            className: '',
+            wrapper: 'li',
+        },
+        {
+            text: 'Оформить заказ',
+            address: '/checkout',
+            className: 'uk-text-success',
+            wrapper: 'li',
+        },
+        {
+            text: 'Корзина',
+            address: '#modal-example',
+            className: 'uk-text-danger',
+            wrapper: 'li',
+            specAttr: 'uk-toggle'
+        },
+    ]));
+    $('.about_menu').append(new Nav([
+        {
+            text: 'Главная',
+            address: '/',
+            className: '',
+            wrapper: 'li',
+        },
+        {
+            text: 'О проекте',
+            address: '/about',
+            className: '',
+            wrapper: 'li',
+        },
+        {
+            text: 'Контакты',
+            address: '/contacts',
+            className: '',
+            wrapper: 'li',
+        },
+        {
+            text: 'Оформить заказ',
+            address: '/checkout',
+            className: 'uk-text-success',
+            wrapper: 'li',
+        },
+        {
+            text: 'Корзина',
+            address: '#modal-example',
+            className: 'uk-text-danger',
+            wrapper: 'li',
+            specAttr: 'uk-toggle'
         },
     ]));
 };
