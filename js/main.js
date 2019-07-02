@@ -228,7 +228,14 @@ window.onload = function () {
         $('#other-list').append(new Card(otherProducts.title, otherProducts.image, otherProducts.description, otherProducts.price));
     });
     $('.form').append(new Form());
+    $('.feedback').append(new Button('Связаться с нами', 'uk-button uk-button-secondary feedback_btn'));
 
+    $('.feedback_btn').on('click', function () {
+        alert(`
+        Скоро появится связь с нами!
+        Подождите немножко :)
+        `);
+    });
     $('#nav-container').append(new Nav([
         {
             text: 'Главная',
