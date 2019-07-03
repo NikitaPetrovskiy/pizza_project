@@ -222,7 +222,7 @@ let Textarea = function (classNames, rows, placeholder,) {
 
 window.onload = function () {
     products.forEach(function (product) {
-        $('#product-list').append(new Card(product.title, product.image, product.description, product.price));
+        $('#pizza-list').append(new Card(product.title, product.image, product.description, product.price));
     });
     otherProducts.forEach(function (otherProducts) {
         $('#other-list').append(new Card(otherProducts.title, otherProducts.image, otherProducts.description, otherProducts.price));
