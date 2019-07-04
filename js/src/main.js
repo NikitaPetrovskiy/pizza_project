@@ -134,7 +134,6 @@ let Image = function (classNames, src, alt) {
             'alt': this.alt
         });
 };
-
 let Button = function (text, classNames) {
     this.text = text;
     this.classNames = classNames || 'uk-button uk-button-default';
@@ -142,7 +141,6 @@ let Button = function (text, classNames) {
         .addClass(this.classNames)
         .text(this.text);
 };
-
 let Heading = function (level, text, classNames) {
     this.text = text;
     this.level = level;
@@ -151,7 +149,6 @@ let Heading = function (level, text, classNames) {
         .text(this.text)
         .addClass(this.classNames);
 };
-
 let Paragraph = function (text, classNames) {
     this.text = text;
     this.classNames = classNames;
@@ -172,7 +169,6 @@ let Input = function (val, placeholder, classNames,  type) {
         })
         .val(this.val);
 };
-
 
 // на данный момент для формы создал свой класс инпута
 let InputForm = function (classNames, type, placeholder,) {
@@ -217,7 +213,6 @@ let Textarea = function (classNames, rows, placeholder,) {
             placeholder: this.placeholder
         });
 };
-
 
 
 window.onload = function () {
@@ -368,4 +363,18 @@ window.onload = function () {
             specAttr: 'uk-toggle'
         },
     ]));
+
+    //выподающее меню
+    $('.pzzlogo').on('mouseover', function (e) {
+        e.preventDefault()
+        $('.uk-navbar-nav').css({
+            left: '-65px'
+        });
+    });
+    $('.pzzlogo').on('mouseout', function (e) {
+        e.preventDefault()
+        $('.uk-navbar-nav').css({
+            left: '-300px'
+        });
+    });
 };
