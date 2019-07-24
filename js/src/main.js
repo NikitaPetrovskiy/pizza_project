@@ -1,3 +1,36 @@
+let nav = [
+    {
+        text: 'Главная',
+        address: '/',
+        className: '',
+        wrapper: 'li',
+    },
+    {
+        text: 'О проекте',
+        address: '/about',
+        className: '',
+        wrapper: 'li',
+    },
+    {
+        text: 'Контакты',
+        address: '/contacts',
+        className: '',
+        wrapper: 'li',
+    },
+    {
+        text: 'Оформить заказ',
+        address: '/checkout',
+        className: 'uk-text-success',
+        wrapper: 'li',
+    },
+    {
+        text: 'Корзина',
+        address: '#modal-example',
+        className: 'uk-text-danger open-modal-btn card',
+        wrapper: 'li',
+        specAttr: 'uk-toggle'
+    }
+];
 let products = [
     {
         title: 'Техас',
@@ -124,50 +157,65 @@ let otherProducts = [
 ];
 
 let Image = function (classNames, src, alt) {
-    this.classNames = classNames;
+    this.classNames = classNames || '';
     this.src = src;
     this.alt = alt || 'Broken image';
-    return $('<img/>')
+    this.$template = $('<img/>')
         .addClass(this.classNames)
         .attr({
             'src': this.src,
             'alt': this.alt
         });
+    return this.$template;
 };
 let Button = function (text, classNames) {
     this.text = text;
     this.classNames = classNames || 'uk-button uk-button-default';
-    return $('<button/>')
+    this.$template = $('<button/>')
         .addClass(this.classNames)
         .text(this.text);
+    return this.$template;
 };
 let Heading = function (level, text, classNames) {
     this.text = text;
     this.level = level;
     this.classNames = classNames || 'uk-card-title';
-    return $(`<h${this.level}/>`)
+    this.$template = $(`<h${this.level}/>`)
         .text(this.text)
         .addClass(this.classNames);
+    return this.$template;
 };
 let Paragraph = function (text, classNames) {
     this.text = text;
     this.classNames = classNames;
-    return $('<p/>')
+    this.$template = $('<p/>')
         .html(this.text)
         .addClass(this.classNames);
+    return this.$template;
 };
-let Input = function (val, placeholder, classNames,  type) {
+let Input = function (val, placeholder, classNames, type) {
     this.placeholder = placeholder;
     this.className = classNames || 'uk-input';
     this.type = type || 'text';
     this.val = val || '';
-    return $('<input/>')
+    this.$template = $('<input/>')
         .addClass(this.className)
         .attr({
             type: this.type,
             placeholder: this.placeholder
         })
         .val(this.val);
+    return this.$template;
+};
+
+let List = function (id, className) {
+    this.id = id;
+    this.className = className || '';
+    this.$template = $('<ul/>')
+        .addClass(this.className)
+        .attr('id', this.id);
+
+    return this.$template;
 };
 
 // на данный момент для формы создал свой класс инпута
@@ -231,138 +279,10 @@ window.onload = function () {
         Подождите немножко :)
         `);
     });
-    $('#nav-container').append(new Nav([
-        {
-            text: 'Главная',
-            address: '/',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'О проекте',
-            address: '/about',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'Контакты',
-            address: '/contacts',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'Оформить заказ',
-            address: '/checkout',
-            className: 'uk-text-success',
-            wrapper: 'li',
-        },
-        {
-            text: 'Корзина',
-            address: '#modal-example',
-            className: 'uk-text-danger',
-            wrapper: 'li',
-            specAttr: 'uk-toggle'
-        },
-    ]));
-    $('.contacts_menu').append(new Nav([
-        {
-            text: 'Главная',
-            address: '/',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'О проекте',
-            address: '/about',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'Контакты',
-            address: '/contacts',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'Оформить заказ',
-            address: '/checkout',
-            className: 'uk-text-success',
-            wrapper: 'li',
-        },
-        {
-            text: 'Корзина',
-            address: '#modal-example',
-            className: 'uk-text-danger',
-            wrapper: 'li',
-            specAttr: 'uk-toggle'
-        },
-    ]));
-    $('.checkout_menu').append(new Nav([
-        {
-            text: 'Главная',
-            address: '/',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'О проекте',
-            address: '/about',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'Контакты',
-            address: '/contacts',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'Оформить заказ',
-            address: '/checkout',
-            className: 'uk-text-success',
-            wrapper: 'li',
-        },
-        {
-            text: 'Корзина',
-            address: '#modal-example',
-            className: 'uk-text-danger',
-            wrapper: 'li',
-            specAttr: 'uk-toggle'
-        },
-    ]));
-    $('.about_menu').append(new Nav([
-        {
-            text: 'Главная',
-            address: '/',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'О проекте',
-            address: '/about',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'Контакты',
-            address: '/contacts',
-            className: '',
-            wrapper: 'li',
-        },
-        {
-            text: 'Оформить заказ',
-            address: '/checkout',
-            className: 'uk-text-success',
-            wrapper: 'li',
-        },
-        {
-            text: 'Корзина',
-            address: '#modal-example',
-            className: 'uk-text-danger',
-            wrapper: 'li',
-            specAttr: 'uk-toggle'
-        },
-    ]));
+    $('#nav-container').append(new Nav(nav));
+    $('.contacts_menu').append(new Nav(nav));
+    $('.checkout_menu').append(new Nav(nav));
+    $('.about_menu').append(new Nav(nav));
 
     //выподающее меню
     $('.pzzlogo').on('mouseover', function (e) {
@@ -377,4 +297,18 @@ window.onload = function () {
             left: '-300px'
         });
     });
+
+    // $('.btnOrder').on('click', function (e) {
+    //     console.log('svdf');
+    //
+    //     $('#item-list').append();
+    // });
+
+    // $('.card').on('click', function () {
+    //     for (let i = 0; i < cardProducts.length; i++) {
+    //         $('#item-list').append(new CardItem(cardProducts[i].image, cardProducts[i].title, cardProducts[i].count));
+    //     }
+    // });
+
+
 };
