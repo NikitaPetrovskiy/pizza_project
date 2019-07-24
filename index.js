@@ -26,6 +26,21 @@ app.get('/', function (req, res) {
     //Отправляем файл страницы
     res.sendFile(path.join(__dirname + '/index.html'));
 });
+app.get('/about', function (req, res) {
+    //Отправляем файл страницы
+    res.sendFile(path.join(__dirname + '/pages/about.html'));
+});
+
+app.get('/checkout', function (req, res) {
+    //Отправляем файл страницы
+    res.sendFile(path.join(__dirname + '/pages/checkout.html'));
+});
+app.get('/contacts', function (req, res) {
+    //Отправляем файл страницы
+    res.sendFile(path.join(__dirname + '/pages/contacts.html'));
+});
+
+
 
 app.get('/getProductsCount', (req, res, next) => {
     let products = (db.getData('/products'));
@@ -46,7 +61,7 @@ app.post('/addProduct', (req, res) => {
         res.end(JSON.stringify({state:"success", products: db.getData('/products')}));
     } else {
         res.writeHead(400, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({state:"error",error:"product contains"}));
+        res.end(JSON.stringify({state:"error",error:"Этот продукт уже находится в корзине"}));
     }
 });
 
@@ -92,20 +107,6 @@ app.post('/decreaseCountOfProduct', (req, res) => {
         res.writeHead(400, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({state:"error",error:"can't decrease count of product"}));
     }
-});
-
-app.get('/about', function (req, res) {
-    //Отправляем файл страницы
-    res.sendFile(path.join(__dirname + '/pages/about.html'));
-});
-
-app.get('/checkout', function (req, res) {
-    //Отправляем файл страницы
-    res.sendFile(path.join(__dirname + '/pages/checkout.html'));
-});
-app.get('/contacts', function (req, res) {
-    //Отправляем файл страницы
-    res.sendFile(path.join(__dirname + '/pages/contacts.html'));
 });
 
 //Просшуиваем порт на запросы
